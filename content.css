@@ -1,0 +1,145 @@
+.deep-search-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #333;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
+}
+
+.deep-search-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.15);
+  /*border: 1px solid rgba(0, 0, 0, 0.15);*/
+}
+
+.deep-search-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.deep-search-popup {
+  position: relative;
+  background: white;
+  border-radius: 4px;
+  max-height: 156px;
+  overflow-y: auto;
+  z-index: 9999;
+  padding: 4px 12px;
+  display: none;
+  width: 320px;
+  border: 1px solid #eee;
+  margin-top: 4px;
+}
+
+.deep-search-popup.active {
+  display: block;
+}
+
+.deep-search-popup-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  cursor: ne-resize;
+}
+
+.deep-search-popup-item:last-child {
+  border-bottom: none;
+}
+
+.deep-search-popup-item:hover {
+  text-decoration: underline;
+}
+
+.deep-search-popup-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.deep-search-tag.text {
+  background-color: #E8F0FE;
+  color: #1A73E8;
+}
+
+.deep-search-tag.frame {
+  background-color: #E6F4EA;
+  color: #137333;
+}
+
+.deep-search-tag.file {
+  background-color: #FCE8E6;
+  color: #D93025;
+}
+
+.deep-search-tag.page {
+  background-color: #FEF7E0;
+  color: #B06000;
+}
+
+.deep-search-tag.text:hover {
+  background-color: #D2E3FC;
+}
+
+.deep-search-tag.frame:hover {
+  background-color: #CEEAD6;
+}
+
+.deep-search-tag.file:hover {
+  background-color: #FAD2CF;
+}
+
+.deep-search-tag.page:hover {
+  background-color: #FEE6B3;
+}
+
+.deep-search-tag.text.active {
+  background-color: #044cb9;
+  color: #fff;
+}
+
+.deep-search-tag.frame.active {
+  background-color: #07912e;
+  color: #fff;
+}
+
+.deep-search-tag.file.active {
+  background-color: #e43226;
+  color: #fff;
+}
+
+.deep-search-tag.page.active {
+  background-color: #bc8611;
+  color: #fff;
+}
+
+.deep-search-text {
+  background-color: #E8F0FE;
+}
+
+.frame-name {
+  background-color: #E6F4EA;
+}
+
+.fuzzy-name {
+  background-color: #FCE8E6;
+}
+
+.page-name {
+  background-color: #E8F0FE;
+}

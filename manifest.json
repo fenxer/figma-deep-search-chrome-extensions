@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Figma Deep Search",
+  "description": "精准搜索 Figma 文本",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon128.png",
+    "32": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.figma.com/*",
+    "https://api.figma.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }, 
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.figma.com/files/team/*/search*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}

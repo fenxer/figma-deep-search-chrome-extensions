@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Figma Deep Search</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icon128.png" alt="Figma Deep Search Logo" width="80" height="80">
+      <h3>Figma Deep Search</h3>
+    </div>
+    <div id="content">
+      <div class="token-section">
+        <span>[可选] 在下方输入 Personal Access Token 后可查看文件中的具体位置</span>
+        <div class="token-input-group">
+          <input type="password" id="figmaToken" placeholder="输入 Figma Personal Access Token" />
+          <button id="saveToken" class="btn btn-primary">保存</button>
+          <button id="clearToken" class="btn btn-secondary">清除</button>
+        </div>
+        <div class="hint">
+          <ul>你的 token 将存储在本地，会随着浏览器一起缓存清除。</ul>
+          <ul>请注意不要泄露你的 token。</ul>
+          <ul>Token 可在 Figma 头像 → Settings → Security 里生成。</ul>
+        </div>
+      </div>
+      <span class="hint">Tips: 遇到功能异常请新建浏览器标签页试试</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

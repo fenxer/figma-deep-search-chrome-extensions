@@ -3,21 +3,33 @@ document.addEventListener('DOMContentLoaded', async function() {
   const tokenInput = document.getElementById('figmaToken');
   const saveButton = document.getElementById('saveToken');
   const clearButton = document.getElementById('clearToken');
+  const toast = document.getElementById('toast');
   const tagsContainer = document.getElementById('tags-container');
   
   // 加载保存的 token
   const savedToken = await getToken();
   tokenInput.value = savedToken;
 
+  // 显示 toast 提示
+  const showToast = (message) => {
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 500);
+  };
+
   // 保存 token
   saveButton.addEventListener('click', () => {
     saveToken(tokenInput.value);
+    showToast('保存成功，请刷新页面');
   });
 
   // 清除 token
   clearButton.addEventListener('click', () => {
     tokenInput.value = '';
     saveToken('');
+    showToast('清除成功');
   });
 
   // 建立与 background script 的连接

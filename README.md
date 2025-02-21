@@ -6,7 +6,7 @@
 - 如果输入了 Figma 个人 token，点击上面标签可展示文件内相关节点；
 - 目前仅支持网格视图模式。
 
-详情可以查看<ins>这篇文章</ins>（待完成）。
+详情可以查看[这篇文章](https://fenx.work/figma-deep-search-chrome-extension)。
 
 ## 安装
 
